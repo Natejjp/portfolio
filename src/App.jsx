@@ -4,33 +4,44 @@ import { Link, Route, Switch } from 'react-router-dom'
 export function App() {
   return (
     <>
-      <header>
-        <h1>Welcome to my SPA</h1>
-        <nav>
+      <header className="header">
+        <nav className="nav">
           <ul>
-            <li>
-              <Link to="/">Go Home</Link>
-            </li>
-            <li>
-              <Link to="/1">Page 1</Link>
-            </li>
-            <li>
-              <Link to="/2">Page 2</Link>
-            </li>
+            <li>Contact</li>
+            <li>Skills</li>
+            <li>Projects</li>
           </ul>
         </nav>
       </header>
+      <main className="main">
+        <section id="one">
+          <img src="src" alt="Photo of me" />
+          <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
+            vel enim similique quaerat veniam modi, odio nemo dolore rerum
+            placeat?
+          </div>
+        </section>
+        <section id="two">
+          <h2 className="title">Skills</h2>
+          <ul>
+            <li>Experience</li>
+            <li>Work in Progress</li>
+          </ul>
+        </section>
+        <section id="three">
+          <h2 className="title">Projects</h2>
+          <ul>
+            <li>Zip Tennis</li>
+            <li>Tamagotchi Pets</li>
+            <li>MineSweeper</li>
+          </ul>
+        </section>
+      </main>
       <Switch>
         <Route exact path="/">
           Home
         </Route>
-        <Route exact path="/1">
-          Page 1
-        </Route>
-        <Route exact path="/2">
-          Page 2
-        </Route>
-        <Route path="*">Not Found</Route>
       </Switch>
     </>
   )
